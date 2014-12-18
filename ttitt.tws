@@ -1,732 +1,0 @@
-(dp0
-S'buildDestination'
-p1
-S''
-p2
-sS'saveDestination'
-p3
-VC:\u005cUsers\u005crob\u005cDesktop\u005cttitt.tws
-p4
-sS'metadata'
-p5
-(dp6
-sS'target'
-p7
-S'sugarcane'
-p8
-sS'storyPanel'
-p9
-(dp10
-S'widgets'
-p11
-(lp12
-(dp13
-S'selected'
-p14
-I00
-sS'pos'
-p15
-(lp16
-I10
-aI10
-asS'passage'
-p17
-(itiddlywiki
-Tiddler
-p18
-(dp20
-S'text'
-p21
-V<marquee style="color: pink;">~*welcome to tass times in tilde town!*~</marquee>\u000a\u000ato get started, choose a class:\u000a\u000a<<choice [[warrior]]>>\u000a<<choice [[historian]]>>\u000a<<choice [[space hero]]>>
-p22
-sS'title'
-p23
-VStart
-p24
-sS'modified'
-p25
-ctime
-struct_time
-p26
-((I2014
-I12
-I16
-I18
-I49
-I51
-I1
-I350
-I0
-tp27
-(dp28
-tp29
-Rp30
-sS'tags'
-p31
-(lp32
-sS'created'
-p33
-g26
-((I2014
-I12
-I16
-I18
-I15
-I49
-I1
-I350
-I0
-tp34
-(dp35
-tp36
-Rp37
-sbsa(dp38
-g14
-I00
-sg15
-(lp39
-I10
-aI150
-asg17
-(itiddlywiki
-Tiddler
-p40
-(dp41
-g21
-Vtass times in tilde town
-p42
-sg23
-VStoryTitle
-p43
-sg25
-g26
-((I2014
-I12
-I16
-I21
-I0
-I21
-I1
-I350
-I0
-tp44
-(dp45
-tp46
-Rp47
-sg31
-(lp48
-sg33
-g26
-((I2014
-I12
-I16
-I18
-I15
-I49
-I1
-I350
-I0
-tp49
-(dp50
-tp51
-Rp52
-sbsa(dp53
-g14
-I00
-sg15
-(lp54
-I10
-aI290
-asg17
-(itiddlywiki
-Tiddler
-p55
-(dp56
-g21
-Vtilde.town
-p57
-sg23
-VStoryAuthor
-p58
-sg25
-g26
-((I2014
-I12
-I16
-I18
-I16
-I13
-I1
-I350
-I0
-tp59
-(dp60
-tp61
-Rp62
-sg31
-(lp63
-sg33
-g26
-((I2014
-I12
-I16
-I18
-I15
-I49
-I1
-I350
-I0
-tp64
-(dp65
-tp66
-Rp67
-sbsa(dp68
-g14
-I00
-sg15
-(lp69
-F262.0
-aF10.0
-asg17
-(itiddlywiki
-Tiddler
-p70
-(dp71
-g21
-V<<set $class = 'spacehero'; $firstname = either(\u000a	'commander',\u000a	'captain',\u000a	'ace',\u000a	'hawkeye',\u000a	'admiral',\u000a	'honey-butt',\u000a	'capitan',\u000a	'hotshot'\u000a); $lastname = either(\u000a	'mclargehuge',\u000a	'beefbroth',\u000a	'hardpec',\u000a	'buttsteak',\u000a	'hardcheese',\u000a	'vanderhuge'\u000a); $shipname = 'ss. ' + either(\u000a	'anne',\u000a	'crumbum',\u000a	'moody wrench',\u000a	'furious turtle',\u000a	'no sausage',\u000a	'rad-as-hell',\u000a	'batman'\u000a); $alienrace = either(\u000a	'krklxians',\u000a	'barblekins',\u000a	'slither-nosed empire mice',\u000a	'ffnrkians',\u000a	'murderbots of seti IV',\u000a	'cute as hell pug dogs',\u000a	'obviously-a-metaphor-for-modern-society'\u000a) >>\u000ayou are ''<<print $firstname>> <<print $lastname>>'', ace space explorer!\u000a\u000ahaving recently escaped from a daring raid on the //evil <<print $alienrace>>//, your damaged ship, //the <<print $shipname>>//, hangs motionless in some forgotten sector of the alphomega quadrant.\u000a\u000asuddenly your radio crackles into life as you receive a [[mysterious transmission|haiku]]...\u000a\u000a[[skip the intro!!|darkness]]
-p72
-sg23
-Vspace hero
-p73
-sg25
-g26
-((I2014
-I12
-I16
-I22
-I1
-I13
-I1
-I350
-I0
-tp74
-(dp75
-tp76
-Rp77
-sg31
-(lp78
-Vintro
-p79
-asg33
-g26
-((I2014
-I12
-I16
-I18
-I16
-I4
-I1
-I350
-I0
-tp80
-(dp81
-tp82
-Rp83
-sbsa(dp84
-g14
-I00
-sg15
-(lp85
-F262.0
-aF150.0
-asg17
-(itiddlywiki
-Tiddler
-p86
-(dp87
-g21
-V<<set $class='warrior';  $firstname = either(\u000a	'eval()',\u000a	'unixtime',\u000a	'nullpointer',\u000a	'const',\u000a	'float',\u000a	'void',\u000a	'bjorn-shell'\u000a); $lastname = either(\u000a	'blood',\u000a	'cold',\u000a	'winter',\u000a	'falcon',\u000a	'ember',\u000a	'hero',\u000a	'honey',\u000a	'iron',\u000a	'steel',\u000a	'bronze',\u000a	'goblin'\u000a) + '-' + either(\u000a	'clod',\u000a	'eye',\u000a	'butt',\u000a	'blade',\u000a	'steel',\u000a	'wine',\u000a	'spear',\u000a	'forge',\u000a	'slayer'\u000a); $shipname = either(\u000a	'naughtylis',\u000a	'pheunix',\u000a	'c++ serpent',\u000a	'let\u005c's-get-kraken'\u000a)>>you are //<<print $firstname>> <<print $lastname>>//, a famed warrior renowned for your bravery!\u000a\u000ayou and your crew aborad the <<print $shipname>> have been sailing the cyclades, hunting for the legendary ''golden tilde''. with it you hope to become the ruler of all the isles and harbour in a new era of peace for your people!\u000a\u000ayou last made port in ithos where the oracle told you to seek the shrouded isle. finally, after weeks of searching, you spy in the distance a mountain peak, its base invisible through the thick fog that rolls over the isle.\u000a\u000a[[take the <<$shipname>> in for a closer look|haiku]]\u000a\u000a[[skip the intro|darkness]]
-p88
-sg23
-Vwarrior
-p89
-sg25
-g26
-((I2014
-I12
-I16
-I22
-I7
-I33
-I1
-I350
-I0
-tp90
-(dp91
-tp92
-Rp93
-sg31
-(lp94
-Vintro
-p95
-asg33
-g26
-((I2014
-I12
-I16
-I18
-I16
-I4
-I1
-I350
-I0
-tp96
-(dp97
-tp98
-Rp99
-sbsa(dp100
-g14
-I01
-sg15
-(lp101
-F262.0
-aF290.0
-asg17
-(itiddlywiki
-Tiddler
-p102
-(dp103
-g21
-V<<set $firstname = either(\u000a	'doctor',\u000a	'professor',\u000a	'alaska',\u000a	'delaware',\u000a	'ohio',\u000a	'north dakota',\u000a	'maverick'\u000a); $lastname = either(\u000a	'smith',\u000a	'johnson',\u000a	'honey-butt',\u000a	'whately',\u000a	'gilman',\u000a	'green'\u000a) $ship = 'hms ' + either(\u000a	'azathothe',\u000a	'dunwich',\u000a	'dagon',\u000a	'ulthar',\u000a	'nyarlothotep'\u000a);\u000a\u000ayou are //<<print $firstname>> <<print $lastname>>//, head <<print either('lecturer', 'teacher', 'expert', 'janitor')>> of the department of archaeology at miscatonic university.\u000a\u000a
-p104
-sg23
-Vhistorian
-p105
-sg25
-g26
-((I2014
-I12
-I16
-I22
-I18
-I16
-I1
-I350
-I0
-tp106
-(dp107
-tp108
-Rp109
-sg31
-(lp110
-sg33
-g26
-((I2014
-I12
-I16
-I18
-I16
-I4
-I1
-I350
-I0
-tp111
-(dp112
-tp113
-Rp114
-sbsa(dp115
-g14
-I00
-sg15
-(lp116
-F484.0
-aF21.0
-asg17
-(itiddlywiki
-Tiddler
-p117
-(dp118
-g21
-V//requires jquery\u000ahaiku = 'default';\u000a$.ajax(\u000a	'http://tilde.town/~jumblesale/ttitt/haiku.json'\u000a).done(function(data) {\u000a	haiku = data.data.haiku;\u000a});\u000a\u000amacros['haiku'] = {\u000a    handler: function(place, macroName, params, parser) {\u000a		insertText(place, haiku);\u000a	},\u000a};
-p119
-sg23
-Vhaiku.script
-p120
-sg25
-g26
-((I2014
-I12
-I16
-I19
-I57
-I13
-I1
-I350
-I0
-tp121
-(dp122
-tp123
-Rp124
-sg31
-(lp125
-Vscript
-p126
-asg33
-g26
-((I2014
-I12
-I16
-I18
-I44
-I35
-I1
-I350
-I0
-tp127
-(dp128
-tp129
-Rp130
-sbsa(dp131
-g14
-I00
-sg15
-(lp132
-I482
-aI152
-asg17
-(itiddlywiki
-Tiddler
-p133
-(dp134
-g21
-V<<if $class == 'spacehero'>>\u000ayou hear a dreaful screech of static like a modem's death throes. the lights on the <<print $shipname>> flicker and go out. you hammer at the keyboard but all the terminals are dead!\u000a\u000ayou sit in silence.\u000a\u000awith a flicker the main terminal leaps to life. you see emblazoned on the screen:\u000a<<endif>>\u000a<<if $class == 'warrior'>>\u000aas the <<print $shipname>> breaks over the waves, you are suddenly overcome with an unbearable feeling of <<print either('nostalgia', 'loss', 'ennui')>>. a voice speaks from inside your head, seeming to come from everywhere at once:\u000a<<endif>>\u000a\u000a<pre id="haiku"><<haiku>></pre>\u000a\u000a<<if $class == 'spacehero'>>[[what could it mean?|space hero investigates transmission]]<<endif>>\u000a<<if $class == 'warrior'>>[[you regain your composure...|warrior investigates vision]]<<endif>>
-p135
-sg23
-Vhaiku
-p136
-sg25
-g26
-((I2014
-I12
-I16
-I21
-I39
-I33
-I1
-I350
-I0
-tp137
-(dp138
-tp139
-Rp140
-sg31
-(lp141
-sg33
-g26
-((I2014
-I12
-I16
-I19
-I9
-I38
-I1
-I350
-I0
-tp142
-(dp143
-tp144
-Rp145
-sbsa(dp146
-g14
-I00
-sg15
-(lp147
-F643.0
-aF19.0
-asg17
-(itiddlywiki
-Tiddler
-p148
-(dp149
-g21
-Vthe strange text cuts out and is replaced by a single cryptic glyph:\u000a\u000a<h1>~</h1>\u000a\u000acould the legends be true? could this be the resting place of the fabled golden tilde?\u000a\u000ayour heart races - for thousands of years mankind has searched for this ancient rune which could finally bring peace to the galaxy. if you were the one to find it, not only would you end the war with the evil <<print $alienrace>> but you would undoubtedly get just huge amounts of space credits for returning it to spacebase XII.\u000a\u000ayou tear open your space atlas and deftly flip to the alphomega quadrant. the nearest planet - and only possible source of the cryptic transmission - is a long-abandoned water planet orbited by a single moon.\u000a\u000ayou go to punch in the co ordinates when laser fire crackles across the bow!\u000a\u000a[[<<print $alienrace>>!|space battle]]
-p150
-sg23
-Vspace hero investigates transmission
-p151
-sg25
-g26
-((I2014
-I12
-I16
-I20
-I25
-I34
-I1
-I350
-I0
-tp152
-(dp153
-tp154
-Rp155
-sg31
-(lp156
-sg33
-g26
-((I2014
-I12
-I16
-I20
-I2
-I12
-I1
-I350
-I0
-tp157
-(dp158
-tp159
-Rp160
-sbsa(dp161
-g14
-I00
-sg15
-(lp162
-F792.0
-aF15.0
-asg17
-(itiddlywiki
-Tiddler
-p163
-(dp164
-g21
-Voh no! you grab the joystick in both hands and the <<print $shipname>> groans as it lumbers to come broadside with your aggressors!\u000a\u000a<<print $alienrace>>, on screen! you yell at the computer.\u000a\u000abut it's no good - the last space dogfight frazzled the voice command module. you'll have to resort to the shell!\u000a\u000a<<choice [[~/closest_ship.sh &#124; xargs /usr/bin/onscreen|on screen]]>>\u000a<<choice [[tail -1 /var/log/aggressors.log &#124; onscreen|on screen]]>>\u000a<<choice [[sudo service voicecommands restart; play ~/lastcommand.wav &#124; voicecommands|on screen]]>>
-p165
-sg23
-Vspace battle
-p166
-sg25
-g26
-((I2014
-I12
-I16
-I21
-I47
-I34
-I1
-I350
-I0
-tp167
-(dp168
-tp169
-Rp170
-sg31
-(lp171
-sg33
-g26
-((I2014
-I12
-I16
-I20
-I25
-I15
-I1
-I350
-I0
-tp172
-(dp173
-tp174
-Rp175
-sbsa(dp176
-g14
-I00
-sg15
-(lp177
-F936.0
-aF17.0
-asg17
-(itiddlywiki
-Tiddler
-p178
-(dp179
-g21
-Vthe cruel countenance of the captain of the <<print $alienrace>> flashes on the screen! you see him for only a second before a salvo of missiles slams into the starboard of the <<print $shipname>>!\u000a\u000ared lights are flashing all over the cabin! the <<print $shipname>> veers wildly off course as you fight with the joystick to regain controls. another blast of laser fire lances past your viewport barely missing you!\u000a\u000ait's no good! the stabilisers are offline and it's all you can do to nudge the nose of the <<print $shipname>> as it hurtles towards the ocean planet below. a console by your face explodes in a shower of sparks as the <<print $shipname>> careens through the atmosphere.\u000a\u000ayou've had difficult landings in the past but none so bad as this. the hull barely holds together as it slams into the surface of the water. the sea kills the inertia of the craft but not soon enough! already the <<print $shipname>> is boring through several strata of rock.\u000a\u000a[[darkness]]
-p180
-sg23
-Von screen
-p181
-sg25
-g26
-((I2014
-I12
-I16
-I22
-I0
-I1
-I1
-I350
-I0
-tp182
-(dp183
-tp184
-Rp185
-sg31
-(lp186
-sg33
-g26
-((I2014
-I12
-I16
-I20
-I30
-I38
-I1
-I350
-I0
-tp187
-(dp188
-tp189
-Rp190
-sbsa(dp191
-g14
-I00
-sg15
-(lp192
-F639.0
-aF161.0
-asg17
-(itiddlywiki
-Tiddler
-p193
-(dp194
-g21
-Vyou snap to as one of your crew shakes you by the shoulder. they point at the massing clouds off the starboard bow. a great storm is brewing there and the sea is beginning to churn and throw the <<print $shipname>> around in the swell.\u000a\u000asuch a storm cannot be natural!\u000a\u000ayou yell at the crew to brace and tack and swab and all sorts of other cool-sounding nautical stuff. the clouds roll in over you and rain begins to blanket the deck.\u000a\u000athe <<print $shipname>> is a steady craft and no small amount of magic went into its construction but even it cannot withstand such weather! your commands are barely heard above the thunder rumbling along the sky. to starboard you can see great waves begin to roll towards you and blot out the horizon. the wind whips around you and carries the <<print $shipname>> inexorably towards the shrouded isle.\u000a\u000a[[hold tight!|warrior storm]]
-p195
-sg23
-Vwarrior investigates vision
-p196
-sg25
-g26
-((I2014
-I12
-I16
-I22
-I9
-I5
-I1
-I350
-I0
-tp197
-(dp198
-tp199
-Rp200
-sg31
-(lp201
-sg33
-g26
-((I2014
-I12
-I16
-I21
-I39
-I37
-I1
-I350
-I0
-tp202
-(dp203
-tp204
-Rp205
-sbsa(dp206
-g14
-I00
-sg15
-(lp207
-F797.0
-aF158.0
-asg17
-(itiddlywiki
-Tiddler
-p208
-(dp209
-g21
-Vyou brace yourself against the rigging as a massive wave picks up the <<print $shipname>> and tosses it aside. you hear the mast snapping with an almight crack and it is all you can do to stay on board the boat as it is engulfed by the wave.\u000a\u000ayou barely have chance to shake the water from your ears as a second wave smashes into the side of the ship and sends it crashing into the reefs around the island. your grip on the rigging falters and the last thing you remember is the gunwale rushing up to meet your face.\u000a\u000a[[darkness]]
-p210
-sg23
-Vwarrior storm
-p211
-sg25
-g26
-((I2014
-I12
-I16
-I21
-I59
-I29
-I1
-I350
-I0
-tp212
-(dp213
-tp214
-Rp215
-sg31
-(lp216
-sg33
-g26
-((I2014
-I12
-I16
-I21
-I54
-I19
-I1
-I350
-I0
-tp217
-(dp218
-tp219
-Rp220
-sbsa(dp221
-g14
-I00
-sg15
-(lp222
-F259.0
-aF462.0
-asg17
-(itiddlywiki
-Tiddler
-p223
-(dp224
-g21
-V
-p225
-sg23
-Vdarkness
-p226
-sg25
-g26
-((I2014
-I12
-I16
-I21
-I59
-I38
-I1
-I350
-I0
-tp227
-(dp228
-tp229
-Rp230
-sg31
-(lp231
-sg33
-g230
-sbsasS'scale'
-p232
-I1
-sS'snapping'
-p233
-I00
-ss.
