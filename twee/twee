@@ -1,0 +1,99 @@
+#!/usr/bin/env python2
+
+import sys, os.path, getopt, glob, traceback
+from header import Header
+from tiddlywiki import TiddlyWiki
+from version import versionString
+
+
+def usage():
+    print >> sys.stderr, 'usage: twee [-t target] [-s startpassage] source1 [source2..]'
+    print >> sys.stderr, '       (source directories are recursively scanned for .tw/.twee files)'
+
+
+class TweeApp(object):
+
+    NAME = 'Twee'
+    VERSION = versionString
+
+    def __init__ (self, path):
+        """Initializes the application."""
+        self.builtinTargetsPath = path + os.sep + 'targets' + os.sep
+
+    def displayError(self, activity, stacktrace = True):
+        activity = activity.strip()
+        print >> sys.stderr, 'Error while ' + activity
+        if stacktrace:
+            print >> sys.stderr, traceback.format_exc(5)
+        else:
+            exceptionValue = sys.exc_info()[1]
+            if exceptionValue is not None:
+                print >> sys.stderr, exceptionValue
+            print >> sys.stderr, ''
+
+
+def main(argv):
+
+    if not argv:
+        usage()
+        sys.exit(2)
+
+    # defaults
+
+    target = 'sugarcane'
+    start = ''
+
+    # read command line switches
+
+    try:
+        opts, args = getopt.getopt(argv, 's:t:', ['start=', 'target='])
+    except getopt.GetoptError:
+        usage()
+        sys.exit(2)
+
+    for opt, arg in opts:
+        if (opt in ('-s', '--start')):
+            start = arg
+        elif (opt in ('-t', '--target')):
+            target = arg
+
+    sources = []
+    for arg in args:
+        for source in glob.glob(arg):
+            if os.path.isdir(source):
+                for dirpath, dirnames, filenames in os.walk(source):
+                    for filename in filenames:
+                        if filename.endswith('.tw') or filename.endswith('.twee'):
+                            sources.append(os.path.join(dirpath, filename))
+            else:
+                sources.append(source)
+
+    if len(sources) == 0:
+        print >> sys.stderr, 'twee: no source files specified'
+        sys.exit(2)
+
+    scriptPath = os.path.dirname(os.path.realpath(sys.argv[0]))
+    app = TweeApp(scriptPath)
+
+    header = Header.factory(target, app.builtinTargetsPath + target + os.sep, app.builtinTargetsPath)
+
+    # populate a TiddlyWiki
+
+    tw = TiddlyWiki()
+    order = []
+    for filename in sources:
+        order += tw.addTweeFromFilename(filename)
+
+    # generate output
+
+    output = tw.toHtml(app, header, order, startAt = start)
+    if output is None:
+        print >> sys.stderr, 'twee: no output'
+    elif sys.stdout.isatty():
+        print output
+    else:
+        print output.encode('utf_8_sig')
+
+
+if __name__ == '__main__':
+    main(sys.argv[1:])

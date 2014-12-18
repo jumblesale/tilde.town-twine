@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]> <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Responsive</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+"VERSION"
+"TIME"
+
+Responsive by Emmanuel King Turner 
+(eturnerx@gmail.com / Twitter: @stormrose / http://eturnerx.com)
+
+based on Initializr (uses Modernizr & jQuery) & The Twine Story Format "Sugarcane"
+
+TiddlyWiki 1.2.39 by Jeremy Ruston, (jeremy [at] osmosoft [dot] com)
+
+Published under a BSD open source license
+Copyright (c) Osmosoft Limited 2005
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+Redistributions of source code must retain the above copyright notice, this
+list of conditions and the following disclaimer.
+
+Redistributions in binary form must reproduce the above copyright notice, this
+list of conditions and the following disclaimer in the documentation and/or other
+materials provided with the distribution.
+
+Neither the name of the Osmosoft Limited nor the names of its contributors may be
+used to endorse or promote products derived from this software without specific
+prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+DAMAGE.
+-->
+<script title="engine">
+(function(){
+
+"ENGINE"
+
+"SUGARCANE"
+
+testplay = "START_AT";
+
+}());
+</script>
+<script title="modules">
+"JQUERY"
+"MODERNIZR"
+</script>
+<!--[if lte IE 8]><script>document.createElement("header");document.createElement("nav");document.createElement("footer");</script><![endif]-->
+<style id="baseCSS">
+/* =============================================================================
+   HTML5 Boilerplate CSS: h5bp.com/css
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html, button, input, select, textarea { font-family: sans-serif; color: #222; }
+body { margin: 0; font-size: 1em; line-height: 1.4em; }
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+blockquote { margin: 1em 40px; }
+dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+pre, code, kbd, samp { font-family: monospace, serif; font-size: 1em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 85%; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: bottom; }
+
+svg:not(:root) { overflow: hidden; }
+
+figure { margin: 0; }
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+label { cursor: pointer; }
+legend { border: 0; padding: 0; white-space: normal; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; }
+button, input { line-height: normal; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+button[disabled], input[disabled] { cursor: default; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
+
+/* ===== Primary Styles ========================================================
+   Author: Twine
+   ========================================================================== */
+
+#storeArea, #storyMenu {display:none; }
+#sidebar > ul > li:empty { display:none; }
+.menu { position:absolute; display:none; }
+#passages { position:relative; }
+a.internalLink,a.externalLink,a.back,a.return,[data-passage],.menu div:hover,nav li a:hover {cursor: pointer;}
+a.brokenLink{background-color:#fcc;text-decoration:none;color:#000;}
+.marked{background-color:red;color:#000;}
+.marked[title]{cursor:help;}
+.passage li[data-bullet] { list-style-type: none; }
+.passage li[data-bullet]:before { content: attr(data-bullet); position: relative; left: -1em; }
+
+html, body, #non-footer-container { height: 100%; }
+body > #non-footer-container { height: auto; min-height: 100%; }
+#non-footer-container > :last-child { padding: 4em 0em 6em 0em; }
+#footer-container {
+	position: relative;
+	margin-top: -6em;
+	overflow:hidden;
+	max-height: 6em;
+	clear:both;
+	box-sizing:border-box;
+	z-index:10;
+}
+
+#loadingbar {
+	position:fixed;
+	top:0;
+	left:0;
+	border-top: solid #f16529 6px;
+	transition: width 0.5s;
+}
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+nav li{
+	display:block;
+	margin-bottom:10px;
+	padding:15px 0;
+	text-align:center;
+}
+
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+	nav li{
+		float:left;
+		display:inline;
+		width:25%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	#title{
+		float:left;
+	}
+	nav{
+		float:right;
+		width:38%;
+	}
+}
+@media only screen and (min-width: 960px) {
+	.wrapper{
+		width:864px; /* 1140px - 10% for margins */
+		margin:0 auto;
+	}
+}
+
+/* =============================================================================
+   Non-Semantic Helper Classes
+   ========================================================================== */
+
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+
+</style><style id="defaultCSS">
+
+/* ===== Initializr Styles =====================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   Modifications: Emmanuel Turner
+   ========================================================================== */
+
+body{ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 12px; line-height: 16px; }
+
+/* ===================
+    ALL: Grey theme
+   =================== */
+
+#header-container{ border-bottom: 20px solid #666; }
+#footer-container{ border-top:    20px solid #666; }
+#main aside      { border-top:    20px solid #666; }
+
+#header-container,
+#footer-container,
+#main aside{
+	background-color: #555;
+}
+
+#title{ color:#fff; }
+
+::-moz-selection { background: #f16529; color: #fff; text-shadow: none; }
+::selection      { background: #f16529; color: #fff; text-shadow: none; }
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+nav li{
+	background:#666;
+	color:#fff;
+	font-weight:bold;
+}
+
+nav li a, nav li a:visited {
+	text-decoration:none;
+	color:#fff;
+}
+
+nav li:hover, nav li a:hover, .storyElement a {
+	color:#fff;
+	text-decoration:underline;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+#main{
+	padding:0 0 1.5em 0;
+}
+#footer-container footer{
+	color:white;
+	padding:20px 0;
+}
+
+
+/* ===== Primary Styles ========================================================
+   Author: Twine
+   ========================================================================== */
+
+#title { margin-top: 0.25em; margin-bottom: 0.25em; }
+#title div { margin: 0; padding: 0; }
+#storyTitle, #storySubtitle { float: left; margin-right: 1em; font-size: 2em; line-height: 1em; }
+#storyAuthor { font-weight: bold; line-height: 1.5em; }
+#snapback #restart{margin:0;}
+#credits { color:#999; font-size: 0.8em; line-height: 1.0em; }
+#credits a { color:#999; text-decoration:none; }
+#credits a:hover { text-decoration:underline; }
+
+.menu { background-color:#666;color:#fff;text-align:left;line-height:2em;}
+.menu div{padding:0 .4em;}
+.menu div:hover{background-color:#fff;color:#666;}
+
+#main-container { padding-top: 1em; }
+#passages { font-size: 12px; line-height: 16px; }
+.passage a{text-decoration:none;}
+.passage a:hover{text-decoration:underline;}
+
+.marked{background-color:red;color:#000;margin-right:12px;padding:3px;}
+.passage ul{margin-left:.5em;padding-left:1.5em;}
+.content > ul{padding-top:1.3em;}
+.passage li{margin-right:6em;}
+.passage ol{margin-left:.5em;padding-left:1.5em;}
+.passage table{border-collapse:collapse;font-size:100%;margin:.8em 1.0em;}
+.passage th,.passage td,.passage tr,.passage caption{padding:3px;}
+.passage hr{height:1px;}
+.passage h1, .passage h2, .passage h3 { margin: 0; padding: 0; font-weight: bold; }
+.passage h1 { font-size:2em; line-height:2em; margin-top:1em; }
+.passage h2 { font-size:1.5em; line-height:1.5em; margin-top:0.5em; }
+.passage h3 { font-size:1em; line-height:1.5em; margin-top:0.5em; }
+.passage center { max-width:50%; margin:auto; }
+
+
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+	nav li{
+		margin:0 0 0 1.7%;
+		padding:1.5em 2%;
+		margin-bottom:0;
+		margin-top:1.7%;
+	}
+	
+	nav li:last-child a{ margin-right:0; }
+	#title { margin-top: 0.5em; margin-bottom: 0.5em; }
+	#passages { font-size: 12px; line-height: 18px; }
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+	#header-container,
+	#main aside{
+		box-shadow:0 5px 10px #aaa;
+	}
+
+/* ============
+    WIDE: Menu
+   ============ */
+
+	nav{
+		margin-top: 0.5em;
+	}
+	#title { margin-top: 1em; margin-bottom: 0.5em; }
+	#passages { font-size: 14px; line-height: 21px; width: 640px; }
+
+}
+
+@media only screen and (min-width: 960px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+	nav { margin-top: 1em; }
+	#passages { font-size: 15px; line-height: 23px; width: 640px; }
+}
+
+</style>
+<style id="transitionCSS">
+.transition-in {
+	opacity:0;
+	position:absolute;
+}
+.passage:not(.transition-out) {
+	transition: 1s;
+	-webkit-transition: 1s;
+}
+#passages .transition-out {
+	opacity:0 !important;
+	position:absolute;
+}
+</style>
+<style id="storyCSS"></style>
+<style id="tagCSS"></style>
+</head>
+<body>
+	<div id="loadingbar"></div>
+	<div id="non-footer-container">
+		<div id="header-container">
+			<header class="wrapper clearfix">
+				<div id="title">
+					<div id="storyTitle" class="storyElement"></div>
+					<div id="storySubtitle" class="storyElement"></div>
+					<div class="clearfix"></div>
+					<div id="storyAuthor" class="storyElement"></div>
+				</div>
+				<nav id="storyMenu" class="storyElement" style="display:none"></nav>
+				<nav id="sidebar">
+					<ul>
+						<li><a href="javascript:;" id="snapback">Rewind</a></li>
+						<li><a href="javascript:;" id="restart">Restart</a></li>
+						<li><a id="bookmark" title="Permanent link to this passage">Bookmark</a></li>
+					</ul>
+				</nav>
+			</header>
+		</div>
+		<div id="snapbackMenu" class="menu"></div>
+		<div id="main-container">
+			<div id="main" class="wrapper clearfix">
+				<div id="passages"><noscript><div id="noscript">Please enable Javascript to play this story!</div></noscript></div>
+			</div> <!-- #main -->
+		</div> <!-- #main-container -->
+	</div>
+	<div id="footer-container">
+		<footer class="wrapper">
+			<div id="credits">This story was created with <a href="http://twinery.org/">Twine</a> and is powered by <a href="http://tiddlywiki.com/">TiddlyWiki</a>. 
+			The Responsive Story Format is by <a href="http://www.eturnerx.com">Emmanuel King Turner</a>. Twitter: <a href="http://www.twitter.com/stormrose">@stormrose</a>
+			</div>
+		</footer>
+	</div>
+<div id="storeArea" data-size="STORY_SIZE" hidden>"STORY"</div></body></html>
