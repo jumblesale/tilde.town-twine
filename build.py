@@ -23,11 +23,6 @@ for twee in glob.glob("/home/*/ttitt/*.twee"):
 	users.append(user)
 	twees.append(twee)
 
-out.write(":: Start\n\n")
-
-for user in users:
-	out.write("[[%s-start]]\n" % user)
-
 for twee in twees:
 	with open(twee) as tweeFile:
 		contents = tweeFile.read()
