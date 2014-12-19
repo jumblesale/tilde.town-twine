@@ -28,6 +28,11 @@ for twee in glob.glob("/home/*/ttitt/*.twee"):
 for user in users.keys():
 	out.write('[[%s-start]]\n' % user)
 
+out.write("\n\n:: StoryAuthor\n")
+
+for user in users.keys():
+	out.write('<a href="http://tilde.town/~%s">~%s</a>' % (user, user))
+
 out.write("\n\n")
 
 for twee in twees:
