@@ -14,6 +14,8 @@ pattern = r'^\/home\/([^\/]+)\/.*'
 users = []
 twees = []
 
+out.write(':: Start\n')
+
 for twee in glob.glob("/home/*/ttitt/*.twee"):
 	matches = re.match(pattern, twee)
 	if not matches:
@@ -22,6 +24,11 @@ for twee in glob.glob("/home/*/ttitt/*.twee"):
 	print('including %s from %s' % (twee, user))
 	users.append(user)
 	twees.append(twee)
+
+for user in users:
+	out.write('[[%s-start]]\n' % user)
+
+out.write("\n\n")
 
 for twee in twees:
 	with open(twee) as tweeFile:
