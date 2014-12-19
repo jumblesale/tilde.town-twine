@@ -11,7 +11,7 @@ out = open(basetwee,'w')
 
 pattern = r'^\/home\/([^\/]+)\/.*'
 
-users = []
+users = {}
 twees = []
 
 out.write(':: Start\n')
@@ -22,10 +22,10 @@ for twee in glob.glob("/home/*/ttitt/*.twee"):
 		continue
 	user = matches.group(1)
 	print('including %s from %s' % (twee, user))
-	users.append(user)
+	users[user] = 1
 	twees.append(twee)
 
-for user in users:
+for user in users.keys():
 	out.write('[[%s-start]]\n' % user)
 
 out.write("\n\n")
