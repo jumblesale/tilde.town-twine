@@ -18,6 +18,8 @@ inits = {}
 
 out.write(':: Start\n')
 
+out.write('<<Init>>\n')
+
 for twee in glob.glob("/home/*/ttitt/*.twee"):
 	userMatches = re.match(userPattern, twee)
 	fileMatches = re.match(filePattern, twee)
