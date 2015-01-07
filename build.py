@@ -48,7 +48,7 @@ out.write('<<Init>> <<Starts>>')
 out.write("\n\n:: StoryAuthor\n")
 
 for user in users.keys():
-	out.write('<a href="http://tilde.town/~%s">~%s</a>' % (user, user))
+	out.write('<a href="http://tilde.town/~%s">~%s</a><br />' % (user, user))
 
 out.write("\n\n")
 
