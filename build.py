@@ -52,6 +52,10 @@ for user in users.keys():
 
 out.write("\n\n")
 
+out.write(':: StoryTitle\n')
+out.write('Tilde Town Team Twine Tale')
+out.write('\n\n')
+
 for twee in twees:
 	with open(twee) as tweeFile:
 		contents = tweeFile.read()
