@@ -18,8 +18,6 @@ inits = {}
 
 out.write(':: Start\n')
 
-out.write('<<Init>>\n')
-
 for twee in glob.glob("/home/*/ttitt/*.twee"):
 	userMatches = re.match(userPattern, twee)
 	fileMatches = re.match(filePattern, twee)
@@ -36,7 +34,6 @@ for twee in glob.glob("/home/*/ttitt/*.twee"):
 
 	if fileName == 'globals.twee':
 		inits[user] = 1
-	
 
 out.write("\n\n")
 
@@ -45,8 +42,8 @@ for user in inits.keys():
 
 out.write("\n")
 
-for user in users.keys():
-	out.write('[[%s-start]]\n' % user)
+# Macros
+out.write('<<Init>> <<Starts>>')
 
 out.write("\n\n:: StoryAuthor\n")
 
