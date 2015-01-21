@@ -36,8 +36,6 @@ for twee in glob.glob("/home/*/ttitt/*.twee"):
 	if fileName == 'globals.twee':
 		inits[user] = 1
 
-out.write("\n\n")
-
 for user in inits.keys():
 	out.write('<<display "%s-globals" >>' % user)
 
