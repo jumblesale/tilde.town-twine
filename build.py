@@ -17,6 +17,7 @@ twees = []
 inits = {}
 
 out.write(':: Start\n')
+out.write('<h2>Choose your fate</h2>')
 
 for twee in glob.glob("/home/*/ttitt/*.twee"):
 	userMatches = re.match(userPattern, twee)
