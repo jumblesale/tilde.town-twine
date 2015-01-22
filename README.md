@@ -65,13 +65,16 @@ Now your .twee file is in place, it needs to be built along with all the other s
     
 Then checkout out your work at the [tilde.town twine url](http://tilde.town/~jumblesale/twine/)!
 
+
 # Something went wrong
 
 Let us know on irc or drop an email through alpine!
 
+
 # What's the deal with ttitt?
 
 Tass Times in Tilde Town comes from a [somewhat-obscure adventure game](https://www.youtube.com/watch?v=hUGOaSqhyzQ) from the Apple II.
+
 
 # What kind of stuff should my story contain?
 
@@ -83,6 +86,16 @@ A few themes of tilde.town that would be cool to see includes are:
 * exploration - sharing stuff you're interested in
 * onion games which slowly reveal themselves like [candy box!](http://candies.aniwey.net/) or [a dark room](http://adarkroom.doublespeakgames.com/)
 
+
+# How do I generate my own version of the twine?
+
+By default, if you git clone this repo and run build.py, it will update the
+global twine at /home/jumblesale. If instead you want to experiment with the
+build process and generate your own twine, you can do the following:
+
+0. `$ git clone https://github.com/jumblesale/tilde.town-twine twine && cd twine`
+0. `./build.py -h` to get help or just `./build.py .` to generate the twine in
+   the current working directory.
 
 Have fun!
 
