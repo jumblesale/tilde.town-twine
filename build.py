@@ -67,7 +67,7 @@ for user in users.keys():
 out.write("\n\n")
 
 out.write(':: StoryTitle\n')
-out.write('Tilde Town Team Twine Tale')
+out.write('Team Twine in Tilde Town Tale')
 out.write('\n\n')
 
 for twee in twees:
